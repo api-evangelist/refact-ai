@@ -3,16 +3,12 @@
   "feeds": [
     {
       "source": "https://refact.ai/blog/",
-      "feed_url": "https://refact.ai/blog/",
-      "title": "",
+      "feed_url": "",
       "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://refact.ai/pricing",
-      "error": "HTTPError"
+      "method": "agent-scrape"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T13:04:11Z",
+  "agent_pulled": "2026-06-27"
 }

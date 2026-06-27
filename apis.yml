@@ -96,7 +96,7 @@ apis:
       - url: https://docs.refact.ai/features/autonomous-agent/integrations/mcp/
         type: Documentation
       - url: https://github.com/modelcontextprotocol
-        type: Standard
+        type: Standards
 common:
   - type: Website
     url: https://refact.ai
@@ -114,9 +114,9 @@ common:
     url: https://refact.ai/pricing
   - type: Blog
     url: https://refact.ai/blog/
-  - type: SignUp
+  - type: Signup
     url: https://refact.smallcloud.ai/
-  - type: SignIn
+  - type: Login
     url: https://refact.smallcloud.ai/
   - type: Contact
     url: https://refact.ai/contact/
