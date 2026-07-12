@@ -98,6 +98,8 @@ apis:
       - url: https://github.com/modelcontextprotocol
         type: Standards
 common:
+  - type: DomainSecurity
+    url: security/refact-ai-domain-security.yml
   - type: Website
     url: https://refact.ai
   - type: Portal
