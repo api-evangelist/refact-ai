@@ -39,6 +39,25 @@ access: 3rd-Party
 kind: contract
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/refact-ai.png
 tags:
+  - Artificial Intelligence
+  - Coding Assistant
+  - AI Agent
+  - Autonomous Agents
+  - Code Completion
+  - Code Generation
+  - Developer Tools
+  - IDE
+  - VS Code
+  - JetBrains
+  - Self-Hosting
+  - On-Premise
+  - Open-Source
+  - LSP
+  - MCP
+  - Fine-Tuning
+  - SWE-Bench
+  - RAG
+tags_raw:
   - AI
   - Artificial Intelligence
   - Coding Assistant
@@ -77,6 +96,12 @@ apis:
       and JetBrains plugins and the GUI call over `http://127.0.0.1:<port>/v1`.
     humanURL: https://docs.refact.ai
     tags:
+      - Artificial Intelligence
+      - Agents
+      - LSP
+      - HTTP
+      - Local
+    tags_raw:
       - AI
       - Agent
       - LSP
@@ -99,6 +124,10 @@ apis:
       capability set inside the IDE.
     humanURL: https://docs.refact.ai/features/autonomous-agent/integrations/mcp/
     tags:
+      - MCP
+      - Agents
+      - Integration
+    tags_raw:
       - MCP
       - Model Context Protocol
       - Agent
