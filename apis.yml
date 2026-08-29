@@ -23,6 +23,19 @@ description: >-
   and trajectories are stored locally; no code is sent to the vendor's
   servers in self-hosted mode.
 type: Index
+deliveryModel:
+  model: saas
+  license: BSD-3-Clause (Refact open-source components)
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - license
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -138,6 +151,12 @@ apis:
       - url: https://github.com/modelcontextprotocol
         type: Standards
 common:
+  - type: IssueTracker
+    url: https://github.com/smallcloudai/refact/issues
+  - type: Releases
+    url: https://github.com/smallcloudai/refact/releases
+  - type: ContributionGuide
+    url: https://github.com/smallcloudai/refact/blob/main/CONTRIBUTING.md
   - type: DomainSecurity
     url: security/refact-ai-domain-security.yml
   - type: Website
