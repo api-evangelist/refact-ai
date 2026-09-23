@@ -1,0 +1,36 @@
+# Front Door AI Index — refact-ai — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: refact-ai
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: refact.ai
+  final_host: refact.ai
+  ownership: own
+  owner: refact-ai
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 82
+  host_score: 82
+  density: 51.67
+  words: 1587
+  tiers:
+    agentic: 39
+    core: 38
+    model: 5
+  ambiguous: 38
+  top_terms:
+    agent: 38
+    AI: 34
+    AI agent: 28
+    LLMs: 4
+    fine-tune: 3
+    GPT: 2
+    RAG: 2
+    copilot: 2
+    prompts: 2
+    Claude: 1
+    Gemini: 1
+    OpenAI: 1
