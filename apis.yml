@@ -64,7 +64,7 @@ tags:
   - JetBrains
   - Self-Hosting
   - On-Premises
-  - Open-Source
+  - Open Source
   - LSP
   - MCP
   - Fine-Tuning
@@ -91,6 +91,7 @@ tags_raw:
   - Fine-Tuning
   - SWE-Bench
   - RAG
+  - Open-Source
 url: https://raw.githubusercontent.com/api-evangelist/refact-ai/refs/heads/main/apis.yml
 created: '2026-05-25'
 modified: '2026-05-25'
