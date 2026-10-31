@@ -1,4 +1,4 @@
-# Refact.ai (refact-ai)
+# Refact.ai
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,113 +64,89 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Refact.ai is an open-source, local-first AI coding assistant and autonomous software-engineering agent built by Small Magellanic Cloud Ai Ltd. ("SmallCloud"). The product combines an IDE-integrated chat experience (Ask / Explore / Debug / Review / Plan / Agent modes), accurate code completion powered by Qwen2.5-Coder with RAG over the workspace, and the Refact Agent — an autonomous mode that plans, executes, and iterates on engineering tasks end-to-end, integrating with Git hosts, databases, shells, browsers, and MCP servers. The full agent stack — a Rust HTTP/LSP engine (`refact-lsp`), a React/Vite chat GUI, and VS Code + JetBrains plugins — is open source under BSD-3-Clause at [github.com/smallcloudai/refact](https://github.com/smallcloudai/refact) and is currently ranked #1 open-source agent on SWE-bench Lite (60.0%) and 93.3% on Aider's Polyglot benchmark with thinking mode.
+Refact.ai is an open-source, local-first AI coding assistant and autonomous software-engineering agent built by Small Magellanic Cloud Ai Ltd. ("SmallCloud"). The product combines an IDE-integrated chat experience (Ask / Explore / Debug / Review / Plan modes), accurate code completion powered by Qwen2.5-Coder with RAG over the workspace, and the Refact Agent — an autonomous mode that plans, executes, and iterates on engineering tasks end-to-end, integrating with Git hosts, databases, shells, browsers, and MCP servers. The full agent stack — a Rust HTTP/LSP engine (`refact-lsp`), a React/Vite chat GUI, and VS Code + JetBrains plugins — is open source under BSD-3-Clause at github.com/smallcloudai/refact and ranked #1 open-source agent on SWE-bench Lite (60.0%) and 93.3% on Aider's Polyglot benchmark with thinking mode. Refact supports a cloud SaaS tier (Free / Pro / Enterprise) — though Refact Cloud is being wound down in favor of BYOK + self-hosting — plus enterprise on-premise deployment with LLM fine-tuning, AWS Marketplace listings, and bring-your-own-key access to Anthropic, OpenAI, Google, xAI, DeepSeek, Groq, Ollama, LM Studio, vLLM, GitHub Copilot, and any OpenAI-compatible endpoint. Refact is positioned as a privacy-preserving, self-hostable alternative to closed cloud coding agents — workspace context, checkpoints, knowledge graphs, and trajectories are stored locally; no code is sent to the vendor's servers in self-hosted mode.
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/refact-ai/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Coding Assistant · AI Agents · Autonomous Agents · Code Completion · Code Generation · Developer Tools · IDE · VS Code · JetBrains · Self-Hosting · On-Premises
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Refact.ai on APIs.io
 
-## Tags
+Everything profiled for Refact.ai is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/refact-ai/](https://apis.io/providers/refact-ai/)** — or go straight to one of the APIs or properties below.
 
-- AI, Artificial Intelligence, Coding Assistant, AI Agent, Autonomous Agents, Code Completion, Code Generation, Developer Tools, IDE, VS Code, JetBrains, Self-Hosting, On-Premise, Open Source, LSP, MCP, Model Context Protocol, Fine-Tuning, SWE-Bench, RAG
+### APIs (2)
 
-## Timestamps
+- [Refact Agent Engine API](https://apis.io/apis/refact-ai/refact-engine-api/) — Local HTTP/LSP API exposed by the Rust `refact-lsp` engine that runs inside the user's IDE or as a standalone server. Implements the agent runtime:…
+- [Refact MCP Integration](https://apis.io/apis/refact-ai/refact-mcp-integration/) — Refact Agent acts as an MCP (Model Context Protocol) client, attaching local or remote MCP servers (`npx`, Python `-m`, `docker run`, or remote SSE) into…
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Refact Agent Engine API
+#### Security (1)
 
-Local HTTP/LSP API exposed by the Rust `refact-lsp` engine that runs inside the user's IDE or as a standalone server. Implements the agent runtime: provider/model capabilities, chat command queueing, SSE event streams, code completion, tool registry and confirmation rules, AST indexing, RAG/vector search over the workspace, integrations configuration, knowledge graph operations, task board management, and workspace checkpoint/rollback. The VS Code and JetBrains plugins and the React GUI all call this contract over `http://127.0.0.1:<port>/v1`.
+Authentication, trust centre, and vulnerability disclosure.
 
-Documented route groups under `/v1` include:
+- [Refact Ai Domain Security](https://apis.io/security/refact-ai/refact-ai-domain-security/)
 
-- `/ping`, `/caps` — health and capabilities discovery
-- `/chats/{id}/commands`, `/chats/subscribe` — chat command queueing and SSE event streams
-- `/code-completion` — completion requests
-- `/tools`, `/tools-check-if-confirmation-needed` — tool registry and confirmation
-- `/ast-status`, `/ast-file-symbols` — AST indexing
-- `/rag-status`, `/vecdb-search` — semantic search over the workspace
-- `/integrations` — provider, MCP, GitHub/GitLab, DB, Docker integration config
-- `/knowledge/*`, `/knowledge-graph` — long-term memory and knowledge ops
-- `/tasks/*` — agent task board
-- `/checkpoints-preview`, `/checkpoints-restore` — workspace rollback
+## Where to find this API
 
-**Human URL:** [https://docs.refact.ai](https://docs.refact.ai)
-
-- [Documentation](https://docs.refact.ai)
-- [Engine source code](https://github.com/smallcloudai/refact/tree/main/refact-agent/engine)
-- [Monorepo](https://github.com/smallcloudai/refact)
-
-### Refact MCP Integration
-
-Refact Agent acts as an MCP (Model Context Protocol) client, attaching local or remote MCP servers (`npx`, Python `-m`, `docker run`, or remote SSE) into the agent's tool surface with per-tool confirmation rules. This makes any MCP server an extension of Refact's capability set inside the IDE.
-
-**Human URL:** [https://docs.refact.ai/features/autonomous-agent/integrations/mcp/](https://docs.refact.ai/features/autonomous-agent/integrations/mcp/)
-
-- [MCP Integration Documentation](https://docs.refact.ai/features/autonomous-agent/integrations/mcp/)
-- [Model Context Protocol](https://github.com/modelcontextprotocol)
-
-## Pricing
-
-| Plan | Price | Notes |
-|---|---|---|
-| Free | $0 | Limited daily agent usage, 32k context chat, unlimited completions |
-| Pro | $10 / month | 40 agent requests/day, 64k context, premium models, Think Mode |
-| Enterprise | Contact | On-premise, fine-tuning on customer code, SSO, dedicated support |
-| BYOK | Your provider's rates | Bring your own Anthropic / OpenAI / Gemini / xAI / DeepSeek / Groq / OpenRouter / Copilot key |
-| Self-Hosted | Free (BSD-3) | Run the open-source stack on your own infra; pay only for the models you choose |
-
-> Note: Refact Cloud is being wound down — BYOK and self-hosting are now the recommended paths.
-
-## Supported Models
-
-**Cloud agent / chat:** GPT-4.1 (default), Claude 3.7 Sonnet, Claude 3.5 Sonnet, GPT-4o, GPT-4o-mini, o3-mini.
-
-**Code completion:** Qwen2.5-Coder-1.5B.
-
-**BYOK providers:** Anthropic, OpenAI, Google Gemini, xAI Grok, DeepSeek, Groq, OpenRouter, GitHub Copilot, plus any OpenAI-compatible endpoint.
-
-**Local/self-hosted providers:** Ollama, LM Studio, vLLM, custom OpenAI-compatible endpoints.
-
-**Self-hosted fine-tunable models:** Refact, StarCoder, DeepSeek-Coder, CodeLlama variants (20+ options across completion and chat).
-
-## Open-Source Repositories
-
-| Repo | Language | Description |
-|---|---|---|
-| [smallcloudai/refact](https://github.com/smallcloudai/refact) | Rust / TypeScript / Kotlin | Monorepo — engine, GUI, VS Code & JetBrains plugins, docs (BSD-3-Clause) |
-| [smallcloudai/refact-bench](https://github.com/smallcloudai/refact-bench) | Dockerfile | SWE-Bench benchmarking harness for coding agents |
-| [smallcloudai/rust-sdk](https://github.com/smallcloudai/rust-sdk) | Rust | MCP Rust SDK (fork of modelcontextprotocol/rust-sdk) |
-| [smallcloudai/litellm](https://github.com/smallcloudai/litellm) | Python | LiteLLM proxy fork |
-| [smallcloudai/refact-vscode](https://github.com/smallcloudai/refact-vscode) | TypeScript | VS Code plugin (archived — now in monorepo) |
-| [smallcloudai/refact-intellij](https://github.com/smallcloudai/refact-intellij) | Kotlin | JetBrains plugin (archived — now in monorepo) |
-
-## IDE Distribution
-
-- [Refact for VS Code (Marketplace)](https://marketplace.visualstudio.com/items?itemName=smallcloud.codify)
-- [Refact for JetBrains (Plugin Marketplace)](https://plugins.jetbrains.com/plugin/20647-refact-ai)
-- Visual Studio, Neovim, and Sublime Text plugins documented at [docs.refact.ai](https://docs.refact.ai)
-- [AWS Marketplace listing](https://aws.amazon.com/marketplace/seller-profile?id=seller-zb3svnusgaibm) for enterprise EC2 deployment
-
-## Common Resources
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://refact.ai)
 - [Documentation](https://docs.refact.ai)
-- [Quickstart](https://docs.refact.ai/introduction/quickstart/)
-- [Enterprise](https://refact.ai/enterprise/)
+- [Getting started](https://docs.refact.ai/introduction/quickstart/)
 - [Pricing](https://refact.ai/pricing)
 - [Blog](https://refact.ai/blog/)
-- [Contact / Demo](https://refact.ai/contact/)
-- [Sign Up / Sign In](https://refact.smallcloud.ai/)
-- [GitHub Organization](https://github.com/smallcloudai)
-- [Discord](https://www.smallcloud.ai/discord)
-- [Twitter / X](https://twitter.com/refact_ai)
-- [LinkedIn](https://www.linkedin.com/company/smallcloud)
-- [YouTube](https://www.youtube.com/@refactai)
+- [GitHub](https://github.com/smallcloudai)
 
-## Maintainers
+## API Evangelist rating
 
-- **Kin Lane** — [kin@apievangelist.com](mailto:kin@apievangelist.com) — [@apievangelist](https://twitter.com/apievangelist) — [apievangelist.com](https://apievangelist.com)
+**Kin Score 12.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 13.2 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/refact-ai/](https://apis.io/providers/refact-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Refact.ai: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/refact-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
